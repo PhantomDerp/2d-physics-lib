@@ -11,7 +11,7 @@
 
 //functions
 //returns a line object from 2 points
-export function getLineFromPoints(p1, p2) {
+function getLineFromPoints(p1, p2) {
   //check for equal y values (infinite slope)
   if (p1[1] == p2[1]) {
     p2[1] += 0.00001;
@@ -21,7 +21,7 @@ export function getLineFromPoints(p1, p2) {
 }
 
 //returns true if the point is in the shape
-export function pointInShape(point, shape) {
+function pointInShape(point, shape) {
   var vals = shape.intercepts(new Line(0, point[1]));
   var val = 0;
   for (var i in vals) {
@@ -34,7 +34,7 @@ export function pointInShape(point, shape) {
 //classes
 
 //Line with slope and y-intercept
-export class Line {
+class Line {
   constructor(slope, yint) {
     this.slope = slope;
     this.yint = yint;
@@ -51,7 +51,7 @@ export class Line {
 }
 
 //shape made of points
-export class Shape {
+class Shape {
   constructor(points) {
     this.points = points;
     if (this.points[0] != this.points[points.length - 1]) {

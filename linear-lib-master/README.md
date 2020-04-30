@@ -7,7 +7,4 @@ Features:
 * Find a Shape's intercepts with a line or another shape
 
 To use, first download and extract the zip to your project's root directory.
-Then add: <script src="linear-lib-master/library.js" type="module"></script> before the other script tags
-
-in your js file add this line:  
-import * as linear from linear-lib-master/library.js
+Then add: <script src="linear-lib-master/library.js"></script> before the other script tags
